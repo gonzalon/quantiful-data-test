@@ -1,0 +1,43 @@
+<h1>
+  {{title}}
+</h1>
+<div class="chart">
+  <ngx-charts-line-chart
+        [view]="size"
+        [results]="dailySalesChart"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="salesByRegionChartConfig.xLabel"
+        [yAxisLabel]="salesByRegionChartConfig.yLabel"
+        [xAxis]="true"
+        [yAxis]="true"
+        [autoScale]="false"
+        [legend]="showLegend"
+        [legendTitle]="salesByRegionChartConfig.legend">
+  </ngx-charts-line-chart>
+</div>
+<div class="chart">
+  <ngx-charts-bar-vertical
+        [view]="size"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="salesByStoreChartConfig.xLabel"
+        [yAxisLabel]="salesByStoreChartConfig.yLabel"
+        [xAxis]="true"
+        [yAxis]="true"
+        [results]="salesByStoreChart"
+        [legend]="showLegend"
+        [legendTitle]="salesByStoreChartConfig.legend"
+        >
+  </ngx-charts-bar-vertical>
+</div>
+<div class="chart">
+  <ngx-charts-pie-chart
+        [view]="size"
+        [results]="salesByRegionChart"
+        [legend]="showLegend"
+        [doughnut]="doughnut"
+        [legendTitle]="salesByRegionChartLegend"
+        >
+  </ngx-charts-pie-chart>
+</div>
